@@ -1,0 +1,32 @@
+nav{
+    background-color: black;
+    height: 30px;
+    width: 100%;
+    padding :5% 0;
+    justify-content: space-between;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+   
+
+}
+
+.nav-img {
+    width: 15%;
+}
+.navbar-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 88%;
+    list-style-type: none;
+}
+.navbar-items-li {
+    text-transform: uppercase;
+   font-weight: bold;
+    font-size: 1.2rem;
+    list-style-type: none;
+
+}
