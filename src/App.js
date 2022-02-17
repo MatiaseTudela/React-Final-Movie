@@ -1,11 +1,12 @@
 import { Route, Switch } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
-import Productos from "./components/Productos";
-import Contador from "./components/Contador";
+import DetalleMovies from './Pages/DetalleMovies';
 import Error404 from "./components/Error404";
 import Footer from "./components/Footer";
 import "./Css/bootstrap.min.css";
+import ResultadoBusqueda from "./Pages/ResultadoBusqueda";
+
 
 function App() {
 	return (
@@ -13,9 +14,10 @@ function App() {
 			<header>
 				<Navbar 
 					links={[
-						{ text: "Inicio", href: "/" },
-					    { text: "Productos", href: "/products"},
-				        { text: "Contador", href: "/contador"},
+						{ text: "Movies Gratis", href: "/" },
+						{ text: "", href: "/DetailMovie" },
+						
+					   
 
 						
 					]} 		
@@ -26,15 +28,15 @@ function App() {
 
 			<Switch>
 				<Route exact path="/" component={Home} />
-		        <Route path="/products" component={Productos} />
-		        <Route path="/contador" component={Contador} />
-				<Route component={Error404} />
+				<Route exact path="/detail/:id" component={DetalleMovies} />
+				<Route path="/search-results" component={ResultadoBusqueda}/>
+		         <Route component={Error404} />
 			</Switch>
 
 			<hr />
-			<Footer>
+			<Footer/>
 
-			</Footer>
+		
 
 			
 		</div>

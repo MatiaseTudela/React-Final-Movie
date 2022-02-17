@@ -1,22 +1,28 @@
 import { useState , useEffect } from "react";
-import MovieCard from "../components/Moviecard";
+import MovieCard from "../components/MovieCard";
 import Spinner from "../components/Spinner";
+import"../Css/App.css";
 
 function Home(){
     let [movies , setMovies]=useState([]);
     let [loading , setLoading]=useState(true);
-
+    
     let apiKey="a8f9cb188269fd197a08f62cd74de710";
 
     let getData=async()=>{
-       await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=es-ES&sort_by=popularity.desc&page=1`)
-            .then(response=>response.json())
+       await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=es.desc&page=1`)
+           
+       .then(response=>response.json())
             .then(data=>{
                 setMovies(data.results)
                 setLoading(false)
+                
+                
                 })       
     };
-
+    
+               
+    
     useEffect(()=>{
         getData()
         // eslint-disable-next-line
@@ -27,15 +33,19 @@ function Home(){
     },[movies])
     */
 
+
     return(
         <>
             <div className="container my-4">
+                <h1>Movies Gratis - Populares 2022</h1>
                 <div className="row" id="popularMovies">
                     {loading?<Spinner />:""}     
                     {movies.map((movie)=>{return <MovieCard key={movie.id} {...movie}/>})}
+                 
+
                 </div>
             </div>
         </>
     )
 }
-export default Home
+export default Home;

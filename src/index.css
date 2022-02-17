@@ -1,0 +1,48 @@
+body{
+    background-color: #22254b !important;
+    color:aliceblue !important;
+}
+
+.card
+{
+    background-color: #22254b !important;
+}
+
+.btn-primary{
+    background-color: blueviolet !important;
+    border-color: blueviolet !important;
+    border-radius: 50% !important;
+}
+
+.btn-primary:hover{
+    box-shadow: 0px 0px 5px 5px blueviolet;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: blueviolet !important;
+    border-color: #212529;
+    border-radius: 50% !important;
+}
+
+.btn-dark:hover {
+    box-shadow: 0px 0px 5px 5px blueviolet;
+    border-color: blueviolet !important;
+}
+
+.btn-outline-info {
+    color: blueviolet !important;
+    border-color: blueviolet !important;
+}
+
+.btn-outline-info:hover {
+    color: #000 !important;
+    background-color: blueviolet !important;
+    border-color: blueviolet !important;
+    box-shadow: 0px 0px 5px 5px blueviolet;
+    
+
+}
+.card-img-top:hover {
+    box-shadow: 0px 0px 2px  5px blueviolet;
+}
